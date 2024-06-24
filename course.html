@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <!-- font awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <script href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+   <!-- icon -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+ <!-- font-google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></head>
+  
+  <title>UtsahEdu</title>
+  <!-- custom css -->
+  <link rel="stylesheet" href="./resource/custom.css">
+  <body>
+  <main class="sidebar-closed">
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-md bg-blue border-bottom" aria-label="Fourth navbar example">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link nav-font  text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font text-white" href="./UpComingBatches.html">Upcoming Batches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font text-white" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font  text-white" aria-disabled="true" href="./Contactus.html">Contact Us</a>
+            </li>
+          </ul>
+          <div id="main" class="d-lg-flex col-lg-3 justify-content-lg-end">
+            <button onclick="toggleNav()" class="openbtn btn btn-primary btn-pri">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </nav><!-- nav end -->
+    <!-- Login form Sidebar -->
+    <div id="mySidebar" class="sidebar bg-white ">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="p-5">
+        <div class="text-center mb-3">
+          <h3 class="modal-title ">Log in to Front</h3>
+          <p class="text-robo">Login to manage your account</p>
+        </div>
+        <form>
+          <div class="mb-3 sign">
+            <label for="exampleInputEmail1" class="form-label text-robo">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email@site.com" required aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text text-robo">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3 sign">
+            <label for="exampleInputPassword1" class="form-label text-robo">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="8+ characters" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label text-robo" for="exampleCheck1">Check me out</label>
+          </div>
+        </form>
+    
+        <div class="d-grid gap-3 text-center signup">
+          <button type="submit" class="btn btn-primary btn-pri btn-lg text-robo">Log in</button>
+    
+          <span class="divided-center text-robo">OR</span>
+    
+          <button type="submit" class="btn g-btn">
+              <span class="d-flex justify-content-center align-items-center text-robo">
+                  <img class="g-avatar avatar-xss me-2" src="./resource/google-icon.svg" alt="Image Description">
+                  Log in with Google
+              </span>
+          </button>
+        </div>
+      </div>
+    </div> <!---login form Sidebar end -->
+    <section class="section-course bg-light py-5 position-relative">
+        <!-- Svg decoration -->
+        <figure class="position-absolute bottom-0 start-0 d-none d-lg-block">
+            <svg width="822.2px" height="301.9px" viewBox="0 0 822.2 301.9">
+                <path class="fill-warning opacity-5" d="M752.5,51.9c-4.5,3.9-8.9,7.8-13.4,11.8c-51.5,45.3-104.8,92.2-171.7,101.4c-39.9,5.5-80.2-3.4-119.2-12.1 c-32.3-7.2-65.6-14.6-98.9-13.9c-66.5,1.3-128.9,35.2-175.7,64.6c-11.9,7.5-23.9,15.3-35.5,22.8c-40.5,26.4-82.5,53.8-128.4,70.7 c-2.1,0.8-4.2,1.5-6.2,2.2L0,301.9c3.3-1.1,6.7-2.3,10.2-3.5c46.1-17,88.1-44.4,128.7-70.9c11.6-7.6,23.6-15.4,35.4-22.8 c46.7-29.3,108.9-63.1,175.1-64.4c33.1-0.6,66.4,6.8,98.6,13.9c39.1,8.7,79.6,17.7,119.7,12.1C634.8,157,688.3,110,740,64.6 c4.5-3.9,9-7.9,13.4-11.8C773.8,35,797,16.4,822.2,1l-0.7-1C796.2,15.4,773,34,752.5,51.9z"></path>
+            </svg>
+        </figure>
+    
+        <div class="container-fluid position-relative">
+            <div class="row ">
+                <div class="col-12">
+                    <div class="row d-flex align-items-center">
+    
+                        <!-- Image -->
+                        <div class="col-6 col-md-3 text-center order-1">
+                            <img src="./resource/img/category-1.svg" class="img-fluid">
+                        </div>
+    
+                        <!-- Content -->
+                        <div class="col-md-6 px-md-5 text-center position-relative order-md-2 mb-5 mb-md-0">
+    
+                            <!-- Svg decoration -->
+                            <figure class="position-absolute top-0 start-0">	
+                                <svg width="22px" height="22px" viewBox="0 0 22 22">
+                                    <polygon class="fill-orange" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
+                                </svg>
+                            </figure>
+    
+                            <!-- Svg decoration -->
+                            <figure class="position-absolute top-0 start-50 translate-middle mt-n6 d-none d-md-block">
+                                <svg width="27px" height="27px">
+                                    <path class="fill-purple" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
+                                </svg>
+                            </figure>
+    
+    
+                            <!-- Title -->
+                            <h1 class="mb-3 display-4">What do you want to learn?</h1>
+                            <p class="mb-3 text-robo text-grey">Grow your skill with the most reliable online courses and certifications</p>
+    
+                            <!-- Search -->
+                            <form class="bg-body rounded p-2">
+                                <div class="input-group">
+                                    <input class="form-control border-0 me-1" type="search" placeholder="Search course ">
+                                    <button type="button" class="btn btn-dark mb-0 rounded">Search</button>
+                                </div>
+                            </form>
+                        </div>
+    
+                        <!-- Image -->
+                        <div class="col-6 col-md-3 text-center order-3">
+                            <img src="./resource/img/category-2.svg" class="img-fluid">
+                        </div>
+                        
+                    </div> <!-- Row END -->
+                </div>
+            </div> <!-- Row END -->
+        </div>
+    </section>
+
+    <section class="container-fluid bg-light py-5">
+      <div class="text-center">
+        <h2 class="card-title mb-3 display-4">Choose a Categories        </h2>
+        <p class="card-text mb-3 text-body-secondary fs-6 text-robo"> Perceived end knowledge certainly day sweetness why cordially.</p>
+      </div>
+
+      <div class="card my-5">
+        <div class="card-header  text-robo-c">
+          Java Courses
+        </div>
+        <div class="card-body">
+          <div class="row ">
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Java Language</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="./course-java.html"><button type="button" class="btn btn-primary btn-pri">Preview</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">OCFA</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text">Spring</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-5">
+        <div class="card-header text-robo-c">
+          Web Development
+        </div>
+        <div class="card-body">
+          <div class="row ">
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/11.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Html</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="./course-java.html"><button type="button" class="btn btn-primary btn-pri">Preview</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/12.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Css</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/09.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">javascript basic</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Web Development</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="./course-wdp.html"><button type="button" class="btn btn-primary btn-pri">Preview</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-5">
+        <div class="card-header text-robo-c">
+          Python
+        </div>
+        <div class="card-body">
+          <div class="row ">
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/05.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Python Language</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="./course-python.html"><button type="button" class="btn btn-primary btn-pri">Preview</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Django</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Sql</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-5">
+        <div class="card-header text-robo-c">
+          Java Script
+        </div>
+        <div class="card-body">
+          <div class="row ">
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/09.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Java Script Basic</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="./course-java.html"><button type="button" class="btn btn-primary btn-pri">Preview</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">java Script advance</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Add more</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-5">
+        <div class="card-header text-robo-c">
+          More Related Courses
+        </div>
+        <div class="card-body">
+          <div class="row ">
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/07.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">React</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="./course-java.html"><button type="button" class="btn btn-primary btn-pri">Preview</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/06.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Angular</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 15rem;">
+                <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+                <div class="card-body text-card">
+                  <p class="card-text text-robo">Sql</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- upper footer -->
+    <section class="ftco-intro py-5 bg-info">
+      <div class="container">
+        <div class="row d-flex justify-content-lg-start">
+          <div class="col-lg-12">
+            <div class="row g-lg-5">
+              <div class="col-md-7 text-lg-right">
+                <h2 class="mb-0 text-white">Newsletter - Stay tune and get the latest update</h2>
+                <p class="mb-0 text-white text-robo">Far far away, behind the word mountains</p>
+              </div>
+              <div class="col-md-5  d-flex justify-content-lg-end align-items-center">
+                <form action="#" class="subscribe-form">
+                  <div class="form-group border-bottom d-flex justify-content-end">
+                    <input type="email" class="form-control" placeholder="Enter email address">
+                    <a href="#" class="btn-icon"><span class="fa fa-paper-plane"></span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer  Start -->
+    <div class="bg-blue pt-5 pb-3">
+          <footer class="container text-white">
+            <div class="row">
+              <div class=" col-6  col-md-5  mb-3">
+                <form>
+                  <a class="me-0" href="index.html">
+                    <!-- <img class="light-mode-item h-40px" src="./logo-light.svg" alt="logo"> -->
+                    <img class="dark-mode-item h-40px" src="./resource/img/Screenshot 2024-01-09 173954.png" alt="logo">
+                  </a>
+                  
+                  <p class="my-3 text-robo">Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
+                  <ul class="list-inline mb-0 mt-3">
+                    <li class="list-inline-item"> <a class="btn btn-face btn-sm shadow px-2 text-facebook" href="#"><i class="bi bi-facebook"></i></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-insta btn-sm shadow px-2 text-instagram" href="#"><i class="bi bi-instagram"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-whatsup btn-sm shadow px-2 text-twitter" href="#"><i class="bi bi-whatsapp"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-link btn-sm shadow px-2 text-linkedin" href="#"><i class="bi bi-linkedin"></i></a> </li>
+                  </ul>
+                </form>
+              </div>
+  
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white text-hebo font-h5">Company</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="./about.html" class="nav-link p-0 text-white  foot-ancor text-robo">About us</a></li>
+                  <li class="nav-item mb-2"><a href="./Contactus.html" class="nav-link p-0 text-white  foot-ancor text-robo">Contact us</a></li>
+                  <li class="nav-item mb-2"><a href="./blog.html" class="nav-link p-0 text-white  foot-ancor text-robo">News and Blogs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">Library</a></li>
+                  <li class="nav-item mb-2"><a href="./career.html" class="nav-link p-0 text-white  foot-ancor text-robo">Career</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white text-hebo font-h5">Community</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">Documentation</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">Forum</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo  ">Sitemap</a></li>
+                  
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-3 mb-3">
+                <h5 class="text-white text-hebo font-h5">Contact</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="tel:+1234567890"  class="nav-link p-0 text-white text-robo foot-ancor">Toll free:+1234 568 963
+                    (9:AM to 8:PM IST)
+                    </a></li>
+                  <li class="nav-item mb-2"><a href="mailto:example@example.com" class="nav-link p-0 text-robo  text-white foot-ancor">Email:example@gmail.com</a></li>
+                  
+                </ul>
+              </div>
+        
+              
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p class="text-white  text-robo">&copy; 2024 Company, Inc. All rights reserved.</p>
+              <!-- Default dropup button -->
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-body-emphasis text-white  text-robo  text-robo foot-ancor" href="./Term-condittion.html">Terms of use</a></li>
+                <li class="ms-3"><a class="link-body-emphasis text-white  text-robo  text-robo foot-ancor" href="./privay-policy.html">Privacy policy</a></li>
+              </ul>
+            </div>
+          </footer>
+    </div>
+    <!-- footer End -->
+    <!-- Back to Top Button -->
+<button onclick="backToTop()" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  </main>
+</body>
+<script>
+  // sidebar login form function
+  function toggleNav() {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+
+      if (sidebar.style.right === "0px") {
+          sidebar.style.right = "-400px";
+          main.style.marginRight = "0";
+          document.removeEventListener('click', closeNavOutside);
+          document.body.classList.remove('sidebar-open');
+      } else {
+          sidebar.style.right = "0px";
+          main.style.marginRight = "-400px";
+          document.addEventListener('click', closeNavOutside);
+          document.body.classList.add('sidebar-open');
+      }
+  }
+  function closeNav() {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+
+      sidebar.style.right = "-400px";
+      main.style.marginRight = "0";
+      document.removeEventListener('click', closeNavOutside);
+      document.body.classList.remove('sidebar-open');
+  }
+  function closeNavOutside(event) {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+      const button = document.querySelector('.openbtn');
+
+      if (!event.target.closest('#mySidebar') && !event.target.closest('.openbtn')) {
+          closeNav();
+      }
+  } // sidebar login form function end
+
+  // Typed.js Initialization
+  var typed = new Typed('#typed-text', {
+    strings: ["future.", "potential.", "skills."],
+    typeSpeed: 90,
+    loop: true,
+    backSpeed: 30,
+    backDelay: 2500
+  });
+
+
+// Show back to top button when user scrolls down
+window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("back-to-top-btn").style.display = "block";
+    } else {
+      document.getElementById("back-to-top-btn").style.display = "none";
+    }
+  }
+  
+  // Scroll to the top when the button is clicked
+  function backToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+</script>
+</html>
+

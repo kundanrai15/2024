@@ -1,0 +1,317 @@
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+     <!-- font awesome-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <script href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+     <!-- icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+   <!-- font-google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></head>
+    
+    <title>UtsahEdu</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./resource/custom.css">
+    <body>
+    <main class="sidebar-closed">
+      <!-- nav bar -->
+      <nav class="navbar navbar-expand-md bg-blue border-bottom" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link nav-font  text-white" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-font text-white" href="./UpComingBatches.html">Upcoming Batches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-font  text-white" aria-disabled="true" href="./Contactus.html">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle nav-font text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item nav-font text-black" href="#">JMP</a></li>
+                  <li><a class="dropdown-item nav-font text-black" href="#">PMP</a></li>
+                  <li><a class="dropdown-item nav-font text-black" href="#">Web Development</a></li>
+                  <li><a class="dropdown-item nav-font text-black" href="#">It Development</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+            <div id="main" class="d-lg-flex col-lg-3 justify-content-lg-end">
+              <button onclick="toggleNav()" class="openbtn btn btn-primary btn-pri">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </nav><!-- nav end -->
+      
+      <!-- Login form Sidebar -->
+      <div id="mySidebar" class="sidebar bg-white ">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="p-5">
+          <div class="text-center mb-3">
+            <h3 class="modal-title ">Log in to Front</h3>
+            <p class="text-robo">Login to manage your account</p>
+          </div>
+          <form>
+            <div class="mb-3 sign">
+              <label for="exampleInputEmail1" class="form-label text-robo">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email@site.com" required aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text text-robo">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3 sign">
+              <label for="exampleInputPassword1" class="form-label text-robo">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="8+ characters" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label text-robo" for="exampleCheck1">Check me out</label>
+            </div>
+          </form>
+      
+          <div class="d-grid gap-3 text-center signup">
+            <button type="submit" class="btn btn-primary btn-pri btn-lg text-robo">Log in</button>
+      
+            <span class="divided-center text-robo">OR</span>
+      
+            <button type="submit" class="btn g-btn">
+                <span class="d-flex justify-content-center align-items-center text-robo">
+                    <img class="g-avatar avatar-xss me-2" src="./resource/google-icon.svg" alt="Image Description">
+                    Log in with Google
+                </span>
+            </button>
+          </div>
+        </div>
+      </div> <!---login form Sidebar end -->
+      <div class="container-fluid mt-5">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <h1>Privacy Policy</h1>
+            <p>Certainly! Here's a sample privacy policy content for an international coding institution website. Please note that privacy policies should be tailored to your specific practices and legal requirements. It's recommended to consult with legal professionals to ensure compliance with applicable laws and regulations.
+
+                ---
+                
+                **Privacy Policy**
+                
+                [Your Company Name] respects your privacy and is committed to protecting your personal information. This Privacy Policy informs you about our policies and practices regarding the collection, use, and disclosure of personal data when you use our website or services.
+                
+                **Information Collection and Use**
+                
+                We collect personal information that you voluntarily provide to us when you use our website or services. This information may include but is not limited to your name, email address, contact information, and any other information you choose to provide.
+                
+                We may use your personal information to:
+                
+                - Provide and maintain our services
+                - Communicate with you regarding your inquiries, requests, or services
+                - Customize and improve our website and services
+                - Send you updates, newsletters, or marketing communications
+                - Comply with legal obligations
+                
+                **Data Security**
+                
+                We take reasonable precautions to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is 100% secure. Therefore, while we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.
+                
+                **Data Sharing and Disclosure**
+                
+                We may share your personal information with third-party service providers or partners who assist us in providing our services, conducting our business, or servicing you. We may also disclose your personal information when required by law or in response to valid legal requests.
+                
+                **Third-Party Links**
+                
+                Our website may contain links to third-party websites or services. Please note that we are not responsible for the content, privacy policies, or practices of any third-party websites or services. We encourage you to review the privacy policies of those websites or services before providing any personal information.
+                
+                **Children's Privacy**
+                
+                Our services are not directed to children under the age of 13. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and you become aware that your child has provided us with personal information, please contact us. If we become aware that we have collected personal information from children without verification of parental consent, we will take steps to remove that information from our servers.
+                
+                **Changes to This Privacy Policy**
+                
+                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
+                
+                **Contact Us**
+                
+                If you have any questions about this Privacy Policy, please contact us at [contact email or address].
+                
+                ---
+                
+                Feel free to customize and adapt this content to better suit the specific practices and needs of your institution. It's also essential to ensure that your privacy policy complies with relevant data protection laws and regulations applicable to your jurisdiction.</p>
+            <!-- Add more content here -->
+          </div>
+        </div>
+      </div>
+      <!-- upper footer -->
+      <section class="ftco-intro py-5 bg-info">
+        <div class="container">
+          <div class="row d-flex justify-content-lg-start">
+            <div class="col-lg-12">
+              <div class="row g-lg-5">
+                <div class="col-md-7 text-lg-right">
+                  <h2 class="mb-0 text-white">Newsletter - Stay tune and get the latest update</h2>
+                  <p class="mb-0 text-white text-robo">Far far away, behind the word mountains</p>
+                </div>
+                <div class="col-md-5  d-flex justify-content-lg-end align-items-center">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group border-bottom d-flex justify-content-end">
+                      <input type="email" class="form-control" placeholder="Enter email address">
+                      <a href="#" class="btn-icon"><span class="fa fa-paper-plane"></span></a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer  Start -->
+      <div class="bg-blue pt-5 pb-3">
+            <footer class="container text-white">
+              <div class="row">
+                <div class=" col-6  col-md-5  mb-3">
+                  <form>
+                    <a class="me-0" href="index.html">
+                      <!-- <img class="light-mode-item h-40px" src="./logo-light.svg" alt="logo"> -->
+                      <img class="dark-mode-item h-40px" src="./resource/img/Screenshot 2024-01-09 173954.png" alt="logo">
+                    </a>
+                    
+                    <p class="my-3 text-robo">Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
+                    <ul class="list-inline mb-0 mt-3">
+                      <li class="list-inline-item"> <a class="btn btn-face btn-sm shadow px-2 text-facebook" href="#"><i class="bi bi-facebook"></i></i></a> </li>
+                      <li class="list-inline-item"> <a class="btn btn-insta btn-sm shadow px-2 text-instagram" href="#"><i class="bi bi-instagram"></i></a> </li>
+                      <li class="list-inline-item"> <a class="btn btn-whatsup btn-sm shadow px-2 text-twitter" href="#"><i class="bi bi-whatsapp"></i></a> </li>
+                      <li class="list-inline-item"> <a class="btn btn-link btn-sm shadow px-2 text-linkedin" href="#"><i class="bi bi-linkedin"></i></a> </li>
+                    </ul>
+                  </form>
+                </div>
+    
+                <div class="col-6 col-md-2 mb-3">
+                  <h5 class="text-white text-hebo font-h5">Company</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">About us</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">Contact us</a></li>
+                    <li class="nav-item mb-2"><a href="./blog.html" class="nav-link p-0 text-white  foot-ancor text-robo">News and Blogs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">Library</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">Career</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-6 col-md-2 mb-3">
+                  <h5 class="text-white text-hebo font-h5">Community</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">Documentation</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">Forum</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo  ">Sitemap</a></li>
+                    
+                  </ul>
+                </div>
+          
+                <div class="col-6 col-md-3 mb-3">
+                  <h5 class="text-white text-hebo font-h5">Contact</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="tel:+1234567890"  class="nav-link p-0 text-white text-robo foot-ancor">Toll free:+1234 568 963
+                      (9:AM to 8:PM IST)
+                      </a></li>
+                    <li class="nav-item mb-2"><a href="mailto:example@example.com" class="nav-link p-0 text-robo  text-white foot-ancor">Email:example@gmail.com</a></li>
+                    
+                  </ul>
+                </div>
+          
+                
+              </div>
+          
+              <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p class="text-white  text-robo">&copy; 2024 Company, Inc. All rights reserved.</p>
+                <!-- Default dropup button -->
+                <ul class="list-unstyled d-flex">
+                  <li class="ms-3"><a class="link-body-emphasis text-white  text-robo  text-robo foot-ancor" href="#">Terms of use</a></li>
+                  <li class="ms-3"><a class="link-body-emphasis text-white  text-robo  text-robo foot-ancor" href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+            </footer>
+      </div>
+      <!-- footer End -->
+      <!-- Back to Top Button -->
+  <button onclick="backToTop()" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  
+    </main>
+  </body>
+  <script>
+    // sidebar login form function
+    function toggleNav() {
+        const sidebar = document.getElementById("mySidebar");
+        const main = document.getElementById("main");
+  
+        if (sidebar.style.right === "0px") {
+            sidebar.style.right = "-400px";
+            main.style.marginRight = "0";
+            document.removeEventListener('click', closeNavOutside);
+            document.body.classList.remove('sidebar-open');
+        } else {
+            sidebar.style.right = "0px";
+            main.style.marginRight = "-400px";
+            document.addEventListener('click', closeNavOutside);
+            document.body.classList.add('sidebar-open');
+        }
+    }
+    function closeNav() {
+        const sidebar = document.getElementById("mySidebar");
+        const main = document.getElementById("main");
+  
+        sidebar.style.right = "-400px";
+        main.style.marginRight = "0";
+        document.removeEventListener('click', closeNavOutside);
+        document.body.classList.remove('sidebar-open');
+    }
+    function closeNavOutside(event) {
+        const sidebar = document.getElementById("mySidebar");
+        const main = document.getElementById("main");
+        const button = document.querySelector('.openbtn');
+  
+        if (!event.target.closest('#mySidebar') && !event.target.closest('.openbtn')) {
+            closeNav();
+        }
+    } // sidebar login form function end
+  
+    // Typed.js Initialization
+    var typed = new Typed('#typed-text', {
+      strings: ["future.", "potential.", "skills."],
+      typeSpeed: 90,
+      loop: true,
+      backSpeed: 30,
+      backDelay: 2500
+    });
+  
+  
+  // Show back to top button when user scrolls down
+  window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("back-to-top-btn").style.display = "block";
+      } else {
+        document.getElementById("back-to-top-btn").style.display = "none";
+      }
+    }
+    
+    // Scroll to the top when the button is clicked
+    function backToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  
+  </script>
+  </html>
+  
+  

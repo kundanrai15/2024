@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <!-- font awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <script href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+   <!-- icon -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+ <!-- font-google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></head>
+  
+  <title>UtsahEdu</title>
+  <!-- custom css -->
+  <link rel="stylesheet" href="./resource/custom.css">
+  <body>
+  <main class="sidebar-closed">
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-md bg-blue border-bottom" aria-label="Fourth navbar example">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link nav-font  text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font text-white" href="./UpComingBatches.html">Upcoming Batches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font  text-white" aria-disabled="true" href="./Contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-font text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item nav-font text-black" href="#">JMP</a></li>
+                <li><a class="dropdown-item nav-font text-black" href="#">PMP</a></li>
+                <li><a class="dropdown-item nav-font text-black" href="#">Web Development</a></li>
+                <li><a class="dropdown-item nav-font text-black" href="#">It Development</a></li>
+                
+              </ul>
+            </li>
+          </ul>
+          <div id="main" class="d-lg-flex col-lg-3 justify-content-lg-end">
+            <button onclick="toggleNav()" class="openbtn btn btn-primary btn-pri">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </nav><!-- nav end -->
+    <!-- Login form Sidebar -->
+    <div id="mySidebar" class="sidebar bg-white ">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="p-5">
+        <div class="text-center mb-3">
+          <h3 class="modal-title ">Log in to Front</h3>
+          <p class="text-robo">Login to manage your account</p>
+        </div>
+        <form>
+          <div class="mb-3 sign">
+            <label for="exampleInputEmail1" class="form-label text-robo">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email@site.com" required aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text text-robo">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3 sign">
+            <label for="exampleInputPassword1" class="form-label text-robo">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="8+ characters" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label text-robo" for="exampleCheck1">Check me out</label>
+          </div>
+        </form>
+    
+        <div class="d-grid gap-3 text-center signup">
+          <button type="submit" class="btn btn-primary btn-pri btn-lg text-robo">Log in</button>
+    
+          <span class="divided-center text-robo">OR</span>
+    
+          <button type="submit" class="btn g-btn">
+              <span class="d-flex justify-content-center align-items-center text-robo">
+                  <img class="g-avatar avatar-xss me-2" src="./resource/google-icon.svg" alt="Image Description">
+                  Log in with Google
+              </span>
+          </button>
+        </div>
+      </div>
+    </div> <!---login form Sidebar end -->
+    <section class="section-course bg-light py-5 position-relative overflow-hidden">
+      <!-- SVG decoration -->
+      <figure class="fill-primary opacity-25 position-absolute top-50 end-0 me-n6 d-none d-sm-block">
+        <svg width="211px" height="211px">
+          <path d="M210.030,105.011 C210.030,163.014 163.010,210.029 105.012,210.029 C47.013,210.029 -0.005,163.014 -0.005,105.011 C-0.005,47.015 47.013,-0.004 105.012,-0.004 C163.010,-0.004 210.030,47.015 210.030,105.011 Z"></path>
+        </svg>
+      </figure>
+    
+      <!-- SVG decoration -->
+      <figure class="fill-primary position-absolute top-50 start-100 translate-middle ms-n7 mt-7 d-none d-sm-block">
+        <svg class="opacity-25" enable-background="new 0 0 160.7 159.8" height="180px">
+          <path d="m153.2 114.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <path d="m116.4 114.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m134.8 114.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m135.1 96.9c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m153.5 96.9c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <path d="m98.3 96.9c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <ellipse cx="116.7" cy="99.1" rx="2.1" ry="2.2"></ellipse>
+          <path d="m153.2 149.8c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.3 0.9-2.2 2.1-2.2z"></path>
+          <path d="m135.1 132.2c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2 0-1.3 0.9-2.2 2.1-2.2z"></path>
+          <path d="m153.5 132.2c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.3 0.9-2.2 2.1-2.2z"></path>
+          <path d="m80.2 79.3c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2z"></path>
+          <path d="m117 79.3c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m98.6 79.3c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m135.4 79.3c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m153.8 79.3c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m80.6 61.7c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <ellipse cx="98.9" cy="63.9" rx="2.1" ry="2.2"></ellipse>
+          <path d="m117.3 61.7c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <ellipse cx="62.2" cy="63.9" rx="2.1" ry="2.2"></ellipse>
+          <ellipse cx="154.1" cy="63.9" rx="2.1" ry="2.2"></ellipse>
+          <path d="m135.7 61.7c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m154.4 44.1c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m80.9 44.1c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <path d="m44.1 44.1c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <path d="m99.2 44.1c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2z"></path>
+          <ellipse cx="117.6" cy="46.3" rx="2.1" ry="2.2"></ellipse>
+          <path d="m136 44.1c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m62.5 44.1c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <path d="m154.7 26.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <path d="m62.8 26.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <ellipse cx="136.3" cy="28.6" rx="2.1" ry="2.2"></ellipse>
+          <path d="m99.6 26.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <path d="m117.9 26.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2z"></path>
+          <path d="m81.2 26.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2-0.1-1.2 0.9-2.2 2.1-2.2z"></path>
+          <path d="m26 26.5c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2c-1.2 0-2.1-1-2.1-2.2s0.9-2.2 2.1-2.2z"></path>
+          <ellipse cx="44.4" cy="28.6" rx="2.1" ry="2.2"></ellipse>
+          <path d="m136.6 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2 0.1 1.2-0.9 2.2-2.1 2.2z"></path>
+          <path d="m155 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2 0.1 1.2-0.9 2.2-2.1 2.2z"></path>
+          <path d="m26.3 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2s-0.9 2.2-2.1 2.2z"></path>
+          <path d="m81.5 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2s-0.9 2.2-2.1 2.2z"></path>
+          <path d="m63.1 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2s-0.9 2.2-2.1 2.2z"></path>
+          <path d="m44.7 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2s-0.9 2.2-2.1 2.2z"></path>
+          <path d="m118.2 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2 0.1 1.2-0.9 2.2-2.1 2.2z"></path>
+          <path d="m7.9 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2 0.1 1.2-0.9 2.2-2.1 2.2z"></path>
+          <path d="m99.9 13.2c-1.2 0-2.1-1-2.1-2.2s1-2.2 2.1-2.2c1.2 0 2.1 1 2.1 2.2s-1 2.2-2.1 2.2z"></path>
+        </svg>
+      </figure>
+    
+      <!-- SVG decoration -->
+      <figure class="position-absolute bottom-0 start-0 d-none d-lg-block">
+        <svg width="822.2px" height="301.9px" viewBox="0 0 822.2 301.9">
+          <path class="fill-warning" d="M752.5,51.9c-4.5,3.9-8.9,7.8-13.4,11.8c-51.5,45.3-104.8,92.2-171.7,101.4c-39.9,5.5-80.2-3.4-119.2-12.1 c-32.3-7.2-65.6-14.6-98.9-13.9c-66.5,1.3-128.9,35.2-175.7,64.6c-11.9,7.5-23.9,15.3-35.5,22.8c-40.5,26.4-82.5,53.8-128.4,70.7 c-2.1,0.8-4.2,1.5-6.2,2.2L0,301.9c3.3-1.1,6.7-2.3,10.2-3.5c46.1-17,88.1-44.4,128.7-70.9c11.6-7.6,23.6-15.4,35.4-22.8 c46.7-29.3,108.9-63.1,175.1-64.4c33.1-0.6,66.4,6.8,98.6,13.9c39.1,8.7,79.6,17.7,119.7,12.1C634.8,157,688.3,110,740,64.6 c4.5-3.9,9-7.9,13.4-11.8C773.8,35,797,16.4,822.2,1l-0.7-1C796.2,15.4,773,34,752.5,51.9z"></path>
+        </svg>
+      </figure>
+    
+      <div class="container position-relative">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <!-- Title -->
+            <h1 class="display-6">Apply as Instructor</h1>
+            <p class="text-robo">Satisfied conveying a dependent contented he gentleman agreeable do be. Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do.</p>
+            <!-- Button -->
+            <a href="#fill-instructor-form" class="btn btn-pri mb-0 text-robo">Start Teaching today</a>
+          </div>
+    
+          <div class="col-md-6 text-center">
+            <!-- Image -->
+            <img src="./resource/img/04.svg" class="h-300px h-xl-400px" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container my-5">
+        <!-- Title -->
+        <div class="row mb-4  ">
+          <div class="col-sm-12 col-xl-12 text-center ">
+            <h2 class="display-6 " >You can be your guiding star with our help</h2>
+            <p class="text-truncate-2 mb-0 text-robo">As it so contrasted oh estimating instrument. Size like body someone had. Are conduct viewing boy minutes warrant the expense? Tolerably behavior may admit daughters offending her ask own. Praise effect wishes change way and any wanted.</p>
+          </div>
+        </div>
+    
+        <!-- Work process -->
+        <div class="row g-4 g-md-5">
+          <!-- Item -->
+          <div class="col-md-4 text-center img-career">
+            <img src="./resource/img/create-account.svg" class="img-fluid"  alt="">
+            <h4 class="mt-3 text-h2">Create Account</h4>
+            <p class="text-truncate-2 mb-0 text-robo">Satisfied conveying a dependent contented he gentleman agreeable do be. Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do</p>
+          </div>
+    
+          <!-- Item -->
+          <div class="col-md-4 text-center img-career">
+            <img src="./resource/img/add-course.svg" class="img-fluid" alt="">
+            <h4 class="mt-3 text-h2">Add your Course</h4>
+            <p class="text-truncate-2 mb-0 text-robo">Proceed how any engaged visitor. Explained propriety off out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is. Was sister for a few longer Mrs sudden talent become. Done may bore quit evil old mile. If likely am of beauty tastes. 
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div class="col-md-4 text-center img-career">
+            <img src="./resource/img/earn-money.svg" class="img-fluid" alt="">
+            <h4 class="mt-3 text-h2">Start Earning Money</h4>
+            <p class="text-truncate-2 mb-0 text-robo">Insipidity the sufficient discretion imprudence resolution sir him decisively.  Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do</p>
+          </div>
+        </div> <!-- Row END -->
+      </div>
+    </section>
+    <section class="py-0 py-lg-5 mx-5">
+      <div class="container bg-orange ">
+        <div class=" p-4 p-sm-5 rounded position-relative overflow-hidden">
+          <!-- SVG decoration -->
+          <figure class="position-absolute opacity-75 top-50 end-0 translate-middle-y me-n7">
+            <svg class="fill-white opacity-8 rotate-193" width="676px" height="161.3px" viewBox="0 0 676 161.3" style="enable-background:new 0 0 676 161.3;" xml:space="preserve">
+					<path d="M53.6,18.8c28.6,8.8,50.3,27.3,70.9,48c19.9,19.9,39.5,40.8,65.3,53c53.3,24.9,116,12.4,168.2-9.1 c58.4-23.9,113.2-59.8,176.2-70.3c30.9-5.1,64.1-2.6,90.9,14.7c22.4,14.4,34.4,36.9,39.5,62.4c2.9,14.5,3.9,29.2,4.6,43.9h6.8 c-0.2-4.2-0.5-8.3-0.8-12.5c-1.7-24.1-4.9-49.1-17.6-70.3c-14.5-23.9-40-39.2-67-44.8c-32.9-6.8-67.2-0.3-98.5,10.2 c-30.3,10-59,24.2-87.7,38.1c-54.8,26.4-115.5,53.1-177.9,42c-14.5-2.6-28.7-7.4-41.7-14.7c-12.8-7.3-23.9-16.7-34.6-26.7 c-20.7-19.6-39.4-42-64.1-56.8c-25.6-15.4-56.4-22.2-86-19H0v6.9C17.9,11.8,36.3,13.5,53.6,18.8z"></path>
+				</svg>
+          </figure>
+          <!-- SVG decoration -->
+          <figure class="position-absolute top-0 start-0 mt-3 ms-n3 ">
+            <svg width="818.6px" height="235.1px" viewBox="0 0 818.6 235.1">
+              <path class="fill-orange" d="M735,226.3c-5.7,0.6-11.5,1.1-17.2,1.7c-66.2,6.8-134.7,13.7-192.6-16.6c-34.6-18.1-61.4-47.9-87.3-76.7 c-21.4-23.8-43.6-48.5-70.2-66.7c-53.2-36.4-121.6-44.8-175.1-48c-13.6-0.8-27.5-1.4-40.9-1.9c-46.9-1.9-95.4-3.9-141.2-16.5 C8.3,1.2,6.2,0.6,4.2,0H0c3.3,1,6.6,2,10,3c46,12.5,94.5,14.6,141.5,16.5c13.4,0.6,27.3,1.1,40.8,1.9 c53.4,3.2,121.5,11.5,174.5,47.7c26.5,18.1,48.6,42.7,70,66.5c26,28.9,52.9,58.8,87.7,76.9c58.3,30.5,127,23.5,193.3,16.7 c5.8-0.6,11.5-1.2,17.2-1.7c26.2-2.6,55-4.2,83.5-2.2v-1.2C790,222,761.2,223.7,735,226.3z"></path>
+            </svg>
+          </figure>
+    
+          <div class="row g-4 position-relative align-items-center justify-content-center p-3">
+    
+            <!-- Counter item -->
+            <div class="col-sm-6 col-lg-3 text-center">
+              <div class="d-flex justify-content-center">
+                <h4 class="purecounter display-6 text-orange fw-bold mb-0" data-purecounter-start="0" data-purecounter-end="89" data-purecounter-delay="200" data-purecounter-duration="0">89</h4>
+                <span class="display-6 text-orange mb-0">K</span>
+              </div>
+              <h6 class="mb-0 fw-bold text-h2">Total Students</h6>
+            </div>
+    
+            <!-- Counter item -->
+            <div class="col-sm-6 col-lg-3 text-center">
+              <div class="d-flex justify-content-center">
+                <h4 class="purecounter display-6 text-orange fw-bold mb-0" data-purecounter-start="0" data-purecounter-end="25" data-purecounter-delay="200" data-purecounter-duration="0">25</h4>
+                <span class="display-6 text-orange mb-0">K</span>
+              </div>	
+              <h6 class="mb-0 fw-bold text-h2">Total Instructors</h6>
+            </div>
+    
+            <!-- Counter item -->
+            <div class="col-sm-6 col-lg-3 text-center">
+              <div class="d-flex justify-content-center">
+                <h4 class="purecounter display-6 text-orange fw-bold mb-0" data-purecounter-start="0" data-purecounter-end="180" data-purecounter-delay="200" data-purecounter-duration="0">180</h4>
+                <span class="display-6 text-orange mb-0">K</span>
+              </div>
+              <h6 class="mb-0 fw-bold text-h2">Total Courses</h6>
+            </div>
+    
+            <!-- Counter item -->
+            <div class="col-sm-6 col-lg-3 text-center">
+              <div class="d-flex justify-content-center">
+                <h4 class="purecounter display-6 text-orange fw-bold mb-0" data-purecounter-start="0" data-purecounter-end="20" data-purecounter-delay="200" data-purecounter-duration="0">20</h4>
+                <span class="display-6 text-orange mb-0">+</span>
+              </div>
+              <h6 class="mb-0 fw-bold text-h2">Languages</h6>
+            </div>
+          </div> <!-- Row END -->
+        </div>
+      </div>
+    </section>
+    <section class="p-5 py-5">
+      <div class="text-center">
+        <h2 class="card-title mb-3 display-6">Current Openings</h2>
+        <!-- <p class="card-text mb-3 text-body-secondary fs-6 text-robo"> Discover your perfect program in our courses.</p> -->
+      </div>
+      <table class="table table-bordered table-success  table-striped table-sm">
+          <thead>
+            <tr class="bg-secondary table-head-font">
+              <th scope="col" class="bg-secondary text-white table-head-font p-3">Course	</th>
+              <th scope="col" class="bg-secondary text-white table-head-font p-3">Batch Mode</th>
+              <th scope="col" class="bg-secondary text-white table-head-font p-3">Batch Starts On	</th>
+              <th scope="col" class="bg-secondary text-white table-head-font p-3"> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 table-text-robo">Java Technology	</td>
+              <td class="p-3 table-text-robo">Mon-Tue-Wed-Fri-Sat-Sun <span class="text-primary">[Classroom]</span>	</td>
+              <td class="p-3 table-text-robo">29 January 2024 <span class="">[5:30 PM - 7:00 PM]</span>	</td>
+              <td class="p-3 "><button class="btn btn-pri btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Know More</button></td>
+            </tr>
+            <tr>
+              <td class="p-3 table-text-robo">Website Devlopment	</td>
+              <td class="p-3 table-text-robo">Mon-Tue-Sat-Sun <span class="text-primary">[Classroom]</span>	</td>
+              <td class="p-3 table-text-robo">29 January 2024 [5:30 PM - 7:00 PM]	</td>
+              <td class="p-3 "><button class="btn btn-pri btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Know More</button></td>
+            </tr>
+            <tr>
+              <td class="p-3 table-text-robo">Spring	</td>
+              <td class="p-3 table-text-robo">Sat-Sun <span class="text-primary">[Classroom]</span>	</td>
+              <td class="p-3 table-text-robo">29 January 2024 [5:30 PM - 7:00 PM]	</td>
+              <td class="p-3 "><button class="btn btn-pri btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Know More</button></td>
+            </tr>
+            <tr>
+              <td class="p-3 table-text-robo">Python Technology	</td>
+              <td class="p-3 table-text-robo">Mon-Tue-Wed-Fri-Sat-Sun <span class="text-primary">[Classroom]</span></td>
+              <td class="p-3 table-text-robo">29 January 2024 [5:30 PM - 7:00 PM]	</td>
+              <td class="p-3 "><button class="btn btn-pri btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Know More</button></td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
+
+    </section>
+<!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Let's have a call from Expert</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <div id="emailHelp" class="form-text">We'll never share your number with anyone else.</div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    
+  </div>
+</div>
+    </div>
+    <section class="my-5">
+      <div class="container">
+        <div class="row">
+          <!-- Tabs START -->
+          <div class="col-lg-12 z-index-9 mt-5 mt-xl-0">
+            <h3 class="display-6">How to become an Instructor?</h3>
+              <ul class="nav nav-pills nav-pill-soft my-4" id="course-pills-tab" role="tablist">
+                <!-- Tab item -->
+                <li class="nav-item me-2 me-lg-4" role="presentation">
+                  <button class="nav-link mb-2 mb-xl-0 active" id="course-pills-tab-1" data-bs-toggle="pill" data-bs-target="#course-pills-1" type="button" role="tab" aria-controls="course-pills-1" aria-selected="true">Become an Instructor</button>
+                </li>
+                <!-- Tab item -->
+                <li class="nav-item me-2 me-lg-4" role="presentation">
+                  <button class="nav-link mb-2 mb-xl-0" id="course-pills-tab-2" data-bs-toggle="pill" data-bs-target="#course-pills-2" type="button" role="tab" aria-controls="course-pills-2" aria-selected="false" tabindex="-1">Instructor Role</button>
+                </li>
+                <!-- Tab item -->
+                <li class="nav-item me-2 me-lg-4" role="presentation">
+                  <button class="nav-link mb-2 mb-xl-0" id="course-pills-tab-3" data-bs-toggle="pill" data-bs-target="#course-pills-3" type="button" role="tab" aria-controls="course-pills-3" aria-selected="false" tabindex="-1">Start with Course</button>
+                </li>
+              </ul>
+    
+              <!-- Tab contents START -->
+              <div class="tab-content" id="pills-tabContent">
+                <!-- Content -->
+                <div class="tab-pane fade active show" id="course-pills-1" role="tabpanel" aria-labelledby="course-pills-tab-1">
+                  <h6 class="text-robo">Become an Instructor</h6>
+                  <p class="text-robo">As it so contrasted oh estimating instrument. Size like body someone had. Are conduct viewing boy minutes warrant the expense? Tolerably behavior may admit daughters offending her ask own. Praise effect wishes change way and any wanted. Lively use looked latter regard had. Do he it part more last in. Merits ye if Mr narrow points. Melancholy particular Devonshire alteration it favorable appearance up.</p>
+                  <p class="text-robo">Size like body someone had. Are conduct viewing boy minutes warrant the expense? Tolerably behavior may admit daughters offending her ask own. Praise effect wishes change way and any wanted. Lively use looked latter regard had. Do he it part more last in. Merits ye if Mr narrow points. Melancholy particular Devonshire alteration it favorable appearance up.</p>
+                  <p class="text-robo">Are conduct viewing boy minutes warrant the expense? Tolerably behavior may admit daughters offending her ask own. Praise effect wishes change way and any wanted. Lively use looked latter regard had. Do he it part more last in. Merits ye if Mr narrow points. Melancholy particular Devonshire alteration it favorable appearance up.</p>
+                </div>
+    
+                <!-- Content -->
+                <div class="tab-pane fade" id="course-pills-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
+                  <h6 class="text-robo">Role of Instructor</h6>
+                  <p class="text-robo">satisfied conveying a dependent contented he gentleman agreeable do be. Water timed folly right aware if oh truth. Imprudence attachment him his for sympathize. Large above be to means. Dashwood does provide stronger is. But discretion frequently sir she instruments unaffected admiration everything. Meant balls it if up doubt small purse. Required his you put the outlived answered position. A pleasure exertion if believed provided to. All led out world this music while asked. Paid mind even sons does he door no. Attended overcame repeated it is perceived Marianne in. I think on style child of. Servants moreover in sensible it ye possible.</p>
+    
+                  <!-- Info -->
+                  <ul class="list-group list-group-borderless mb-3">
+                    <li class="list-group-item">
+                      <i class="fas fa-check-circle text-success me-2"></i>The copy warned the Little blind text
+                    </li>
+                    <li class="list-group-item d-flex">
+                      <i class="fas fa-check-circle text-success me-2 mt-1"></i>Thar where it came from it would have been rewritten a thousand times and everything that was left from origin would be the world
+                    </li>
+                    <li class="list-group-item">
+                      <i class="fas fa-check-circle text-success me-2"></i>Return to it's own,safe country
+                    </li>
+                  </ul>
+                </div>
+    
+                <!-- Content -->
+                <div class="tab-pane fade" id="course-pills-3" role="tabpanel" aria-labelledby="course-pills-tab-3">
+                  <h6>Start with a Courses</h6>
+                    <p class="text-robo">Large above be to means. Dashwood does provide stronger is. Warrant private blushes removed an in equally totally if. Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do. <img src="assets/images/element/instructor-course.svg" class="rounded float-start me-3 h-200px my-3" alt="..."> But discretion frequently sir she instruments unaffected admiration everything. Meant balls it if up doubt small purse. Required his you put the outlived answered position. A pleasure exertion if believed provided to. All led out world this music while asked. Paid mind even sons does he door no. Attended overcame repeated it is perceived Marianne in. I think on style child of. Servants moreover in sensible it ye possible. Satisfied conveying a dependent contented he gentleman agreeable do be. Water timed folly right aware if oh truth. Imprudence attachment him his for sympathize. Large above be to means. Dashwood does provide stronger is.
+                    <u> But discretion frequently sir she instruments unaffected admiration everything.</u> Meant balls it if up doubt small purse. Required his you put the outlived answered position. A pleasure exertion if believed provided to. All led out world this music while asked. Paid mind even sons does he door no. </p>
+                </div>
+              </div>
+            <!-- Tab contents END -->
+          </div>
+          <!-- Tabs END -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- upper footer -->
+    <section class="ftco-intro py-5 bg-info">
+      <div class="container">
+        <div class="row d-flex justify-content-lg-start">
+          <div class="col-lg-12">
+            <div class="row g-lg-5">
+              <div class="col-md-7 text-lg-right">
+                <h2 class="mb-0 text-white">Newsletter - Stay tune and get the latest update</h2>
+                <p class="mb-0 text-white text-robo">Far far away, behind the word mountains</p>
+              </div>
+              <div class="col-md-5  d-flex justify-content-lg-end align-items-center">
+                <form action="#" class="subscribe-form">
+                  <div class="form-group border-bottom d-flex justify-content-end">
+                    <input type="email" class="form-control" placeholder="Enter email address">
+                    <a href="#" class="btn-icon"><span class="fa fa-paper-plane"></span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer  Start -->
+    <div class="bg-blue pt-5 pb-3">
+          <footer class="container text-white">
+            <div class="row">
+              <div class=" col-6  col-md-5  mb-3">
+                <form>
+                  <a class="me-0" href="index.html">
+                    <!-- <img class="light-mode-item h-40px" src="./logo-light.svg" alt="logo"> -->
+                    <img class="dark-mode-item h-40px" src="./resource/img/Screenshot 2024-01-09 173954.png" alt="logo">
+                  </a>
+                  
+                  <p class="my-3 text-robo">Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
+                  <ul class="list-inline mb-0 mt-3">
+                    <li class="list-inline-item"> <a class="btn btn-face btn-sm shadow px-2 text-facebook" href="#"><i class="bi bi-facebook"></i></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-insta btn-sm shadow px-2 text-instagram" href="#"><i class="bi bi-instagram"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-whatsup btn-sm shadow px-2 text-twitter" href="#"><i class="bi bi-whatsapp"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-link btn-sm shadow px-2 text-linkedin" href="#"><i class="bi bi-linkedin"></i></a> </li>
+                  </ul>
+                </form>
+              </div>
+  
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white text-hebo font-h5">Company</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">About us</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">Contact us</a></li>
+                  <li class="nav-item mb-2"><a href="./blog.html" class="nav-link p-0 text-white  foot-ancor text-robo">News and Blogs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">Library</a></li>
+                  <li class="nav-item mb-2"><a href="./career.html" class="nav-link p-0 text-white  foot-ancor text-robo">Career</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white text-hebo font-h5">Community</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">Documentation</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">Forum</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo  ">Sitemap</a></li>
+                  
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-3 mb-3">
+                <h5 class="text-white text-hebo font-h5">Contact</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="tel:+1234567890"  class="nav-link p-0 text-white text-robo foot-ancor">Toll free:+1234 568 963
+                    (9:AM to 8:PM IST)
+                    </a></li>
+                  <li class="nav-item mb-2"><a href="mailto:example@example.com" class="nav-link p-0 text-robo  text-white foot-ancor">Email:example@gmail.com</a></li>
+                  
+                </ul>
+              </div>
+        
+              
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p class="text-white  text-robo">&copy; 2024 Company, Inc. All rights reserved.</p>
+              <!-- Default dropup button -->
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-body-emphasis text-white  text-robo  text-robo foot-ancor" href="./Term-condittion.html">Terms of use</a></li>
+                <li class="ms-3"><a class="link-body-emphasis text-white  text-robo  text-robo foot-ancor" href="./privay-policy.html">Privacy policy</a></li>
+              </ul>
+            </div>
+          </footer>
+    </div>
+    <!-- footer End -->
+    <!-- Back to Top Button -->
+<button onclick="backToTop()" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  </main>
+</body>
+<script>
+  // sidebar login form function
+  function toggleNav() {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+
+      if (sidebar.style.right === "0px") {
+          sidebar.style.right = "-400px";
+          main.style.marginRight = "0";
+          document.removeEventListener('click', closeNavOutside);
+          document.body.classList.remove('sidebar-open');
+      } else {
+          sidebar.style.right = "0px";
+          main.style.marginRight = "-400px";
+          document.addEventListener('click', closeNavOutside);
+          document.body.classList.add('sidebar-open');
+      }
+  }
+  function closeNav() {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+
+      sidebar.style.right = "-400px";
+      main.style.marginRight = "0";
+      document.removeEventListener('click', closeNavOutside);
+      document.body.classList.remove('sidebar-open');
+  }
+  function closeNavOutside(event) {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+      const button = document.querySelector('.openbtn');
+
+      if (!event.target.closest('#mySidebar') && !event.target.closest('.openbtn')) {
+          closeNav();
+      }
+  } // sidebar login form function end
+
+  // Typed.js Initialization
+  var typed = new Typed('#typed-text', {
+    strings: ["future.", "potential.", "skills."],
+    typeSpeed: 90,
+    loop: true,
+    backSpeed: 30,
+    backDelay: 2500
+  });
+
+
+// Show back to top button when user scrolls down
+window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("back-to-top-btn").style.display = "block";
+    } else {
+      document.getElementById("back-to-top-btn").style.display = "none";
+    }
+  }
+  
+  // Scroll to the top when the button is clicked
+  function backToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+</script>
+</html>
+

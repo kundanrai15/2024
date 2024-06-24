@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div id="counter" class="display-1 text-center">0</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      const endNumber = 100; // Change this to the number you want
+
+      let currentNumber = 0;
+      const counterElement = $('#counter');
+
+      function updateCounter() {
+        counterElement.text(currentNumber);
+        if (currentNumber < endNumber) {
+          currentNumber++;
+          setTimeout(updateCounter, 100); // Adjust the speed of counting (milliseconds)
+        }
+      }
+
+      updateCounter();
+    });
+  </script>
+
+</body>
+</html>

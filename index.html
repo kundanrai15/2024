@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <!-- font awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <script href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+   <!-- icon -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+ <!-- font-google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></head>
+  <link rel="stylesheet" href="./resource/aos/aos.css">
+  <script src="./resource/aos/aos.js"></script>
+  <title>UtsahEdu</title>
+  <!-- custom css -->
+  <link rel="stylesheet" href="./resource/custom.css">
+
+  <body>
+  <main class="sidebar-closed">
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-md bg-blue border-bottom" aria-label="Fourth navbar example">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link nav-font  text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font text-white" href="./UpComingBatches.html">Upcoming Batches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font text-white" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font  text-white" aria-disabled="true" href="./Contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-font  text-white" aria-disabled="true" href="./course.html">Courses</a>
+            </li>
+          </ul>
+          <div id="main" class="d-lg-flex col-lg-3 justify-content-lg-end">
+            <button onclick="toggleNav()" class="openbtn btn btn-primary btn-pri">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </nav><!-- nav end -->
+    
+    <!-- Login form Sidebar -->
+    <div id="mySidebar" class="sidebar bg-white ">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="p-5">
+        <div class="text-center mb-3">
+          <h3 class="modal-title ">Log in to Front</h3>
+          <p class="text-robo">Login to manage your account</p>
+        </div>
+        <form>
+          <div class="mb-3 sign">
+            <label for="exampleInputEmail1" class="form-label text-robo">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email@site.com" required aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text text-robo">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3 sign">
+            <label for="exampleInputPassword1" class="form-label text-robo">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="8+ characters" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label text-robo" for="exampleCheck1">Check me out</label>
+          </div>
+        </form>
+    
+        <div class="d-grid gap-3 text-center signup">
+          <button type="submit" class="btn btn-primary btn-pri btn-lg text-robo">Log in</button>
+    
+          <span class="divided-center text-robo">OR</span>
+    
+          <button type="submit" class="btn g-btn">
+              <span class="d-flex justify-content-center align-items-center text-robo">
+                  <img class="g-avatar avatar-xss me-2" src="./resource/google-icon.svg" alt="Image Description">
+                  Log in with Google
+              </span>
+          </button>
+        </div>
+      </div>
+    </div> <!---login form Sidebar end -->
+    <!-- First Section front page-->
+    <div class="container-fluid pt-5 pb-5 ">
+      <div class="row justify-content-md-between align-items-sm-center">
+        <div class="col-lg-5 col-md-6 mb-5 mb-md-0">
+          <img class="img-fluid" src="./resource/img/oc-growing.svg" alt="Image Description">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="mb-5">
+            <h1 class="display-4 mb-3">
+              Unlock your <br>
+              <span class="text-pri text-highlight-warning">
+                <span class="typed-text" id="typed-text"></span><span class="typed-cursor typed-cursor--blink"
+                  aria-hidden="true">|</span>
+              </span>
+            </h1>
+            <p class="lead">With our platform, you can quantify your skills, grow in your role, and stay relevant on
+              critical topics.</p>
+          </div>
+          <div class="d-grid gap-3 d-md-flex justify-content-md-start align-items-md-center">
+            <a class="btn btn-pri btn-primary text-robo" href="../page-login.html">Start a free trial</a>
+            <!-- Fancybox -->
+            <a class="btn btn-outline-secondary text-robo" href="https://www.youtube.com/watch?v=d4eDWc8g0e0"
+              role="button" data-bs-toggle="modal" data-bs-target="#videoModal">
+              <i class="bi bi-play-fill me-2"></i> How it works
+            </a>
+            
+            <!-- End Fancybox -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--First Section Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/d4eDWc8g0e0" frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div> <!--First Section Video Modal End-->
+    <!-- Section second details -->
+    <section class="py-0 py-xl-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Counter item one -->
+          <div class="col-sm-6 col-xl-3">
+            <div class="d-flex justify-content-center align-items-center p-4 bg-warning bg-opacity-10 rounded-3">
+              <span class="display-6 lh-1 text-warning mb-0"><i class="fas fa-tv"></i></span>
+              <div class="ms-4 h6 fw-normal mb-0">
+                <div class="d-flex " >
+                  <h5  id="counter" class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-delay="200" data-purecounter-duration="0">0</h5>
+                  <span class="mb-0 h5">K</span>
+                </div>
+                <p class="mb-0 text-robo">Online Courses</p>
+              </div>
+            </div>
+          </div>
+          <!-- Counter item two-->
+          <div class="col-sm-6 col-xl-3">
+            <div class="d-flex justify-content-center align-items-center p-4 bg-success bg-opacity-10 rounded-3">
+              <span class="display-6 lh-1 text-purple mb-0"><i class="fas fa-user-tie"></i></span>
+              <div class="ms-4 h6 fw-normal mb-0">
+                <div class="d-flex">
+                  <h5 id="counter2" class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="60" data-purecounter-delay="200" data-purecounter-duration="0">0</h5>
+                  <span class="mb-0 h5">K+</span>
+                </div>
+                <p class="mb-0">Expert <br> Tutors</p>
+              </div>
+            </div>
+          </div>
+          <!-- Counter item three-->
+          <div class="col-sm-6 col-xl-3">
+            <div class="d-flex justify-content-center align-items-center p-4 bg-danger bg-opacity-10 rounded-3">
+              <span class="display-6 lh-1 text-purple mb-0"><i class="fas fa-user-graduate"></i></span>
+              <div class="ms-4 h6 fw-normal mb-0">
+                <div class="d-flex">
+                  <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="60" data-purecounter-delay="200" data-purecounter-duration="0">60</h5>
+                  <span class="mb-0 h5">K+</span>
+                </div>
+                <p class="mb-0">Online Students</p>
+              </div>
+            </div>
+          </div>
+          <!-- Counter item four -->
+          <div class="col-sm-6 col-xl-3">
+            <div class="d-flex justify-content-center align-items-center p-4 bg-info bg-opacity-10 rounded-3">
+              <span class="display-6 lh-1 text-info mb-0"><i class="bi bi-patch-check-fill"></i></span>
+              <div class="ms-4 h6 fw-normal mb-0">
+                <div class="d-flex">
+                  <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="6" data-purecounter-delay="300" data-purecounter-duration="0">6</h5>
+                  <span class="mb-0 h5">K+</span>
+                </div>
+                <p class="mb-0">Certified Courses</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- Section second details end -->
+    <!-- Section third card -->
+    <Section class="Explore my-3">
+      <div class="text-center">
+        <h2 class="card-title mb-3 text-h2">Featured courses</h2>
+        <p class="card-text mb-3 text-body-secondary fs-6 text-robo"> Discover your perfect program in our courses.</p>
+      </div>
+      <section class="p-5 container-fluid">
+        <div class="row ">
+          <div class="col">
+            <div class="card" style="width: 22rem;">
+              <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+              <div class="card-body text-card">
+                <p class="card-text">JAVA</p>
+                <h3 class="card-title ">Complete Java Bootcamp: Go from zero to hero in Java</h3>
+                <div class="card-body card-sec">
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-book-open"></i>22 Lessons </a><Span>/</Span>
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-clock"></i>30 h 25min</a>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">$99.99</h3>
+                  <div class="btn-group">
+                    <a href="./course-java.html"><button type="button" class="btn btn-primary btn-pri">Preview</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 22rem;">
+              <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+              <div class="card-body text-card">
+                <p class="card-text">Python</p>
+                <h3 class="card-title ">Complete Python Bootcamp: Go from zero to hero in Python</h3>
+                <div class="card-body card-sec">
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-book-open"></i>22 Lessons </a><Span>/</Span>
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-clock"></i>30 h 25min</a>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">$99.99</h3>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 22rem;">
+              <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+              <div class="card-body text-card">
+                <p class="card-text">Spring</p>
+                <h3 class="card-title ">Complete Spring Bootcamp: Go from zero to hero in Spring</h3>
+                <div class="card-body card-sec">
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-book-open"></i>22 Lessons </a><Span>/</Span>
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-clock"></i>30 h 25min</a>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">$99.99</h3>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row my-5">
+          <div class="col">
+            <div class="card" style="width: 22rem;">
+              <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+              <div class="card-body text-card">
+                <p class="card-text">Web Development</p>
+                <h3 class="card-title ">Complete W.D Bootcamp: Go from zero to hero in W.D</h3>
+                <div class="card-body card-sec">
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-book-open"></i>22 Lessons </a><Span>/</Span>
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-clock"></i>30 h 25min</a>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">$99.99</h3>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 22rem;">
+              <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+              <div class="card-body text-card">
+                <p class="card-text">Sql</p>
+                <h3 class="card-title ">Complete  Sql Bootcamp: Go from zero to hero in Sql</h3>
+                <div class="card-body card-sec">
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-book-open"></i>22 Lessons </a><Span>/</Span>
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-clock"></i>30 h 25min</a>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">$99.99</h3>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 22rem;">
+              <img src="./resource/img/card-12.svg" class="card-img-top" alt="...">
+              <div class="card-body text-card">
+                <p class="card-text">Code</p>
+                <h3 class="card-title ">Complete Python Bootcamp: Go from zero to hero in Python</h3>
+                <div class="card-body card-sec">
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-book-open"></i>22 Lessons </a><Span>/</Span>
+                  <a href="#" class="card-text text-body-secondary"><i class="fa-solid fa-clock"></i>30 h 25min</a>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">$99.99</h3>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-pri">Preview</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Section> <!-- Section third card end -->
+    <!-- explore -->
+    <div class="Explore ">
+    <div class="p-5 text-center ">
+      <div class="card-body">
+        <h2 class="card-title mb-3 text-h2">Find the right learning path for you</h2>
+        <p class="card-text mb-3 text-body-secondary fs-6 text-robo">Answer a few questions and match your goals to our programs.</p>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-pri btn-primary text-robo">Explore by category</button>
+      </div>
+    </div>
+    </div><!-- explore end -->
+    <!-- upper footer -->
+    <section class="ftco-intro py-5 bg-info">
+      <div class="container">
+        <div class="row d-flex justify-content-lg-start">
+          <div class="col-lg-12">
+            <div class="row g-lg-5">
+              <div class="col-md-7 text-lg-right">
+                <h2 class="mb-0 text-white">Newsletter - Stay tune and get the latest update</h2>
+                <p class="mb-0 text-white text-robo">Far far away, behind the word mountains</p>
+              </div>
+              <div class="col-md-5  d-flex justify-content-lg-end align-items-center">
+                <form action="#" class="subscribe-form">
+                  <div class="form-group border-bottom d-flex justify-content-end">
+                    <input type="email" class="form-control" placeholder="Enter email address">
+                    <a href="#" class="btn-icon"><span class="fa fa-paper-plane"></span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer  Start -->
+    <div class="bg-blue pt-5 pb-3">
+          <footer class="container text-white">
+            <div class="row">
+              <div class=" col-6  col-md-5  mb-3">
+                <form>
+                  <a class="me-0" href="index.html">
+                    <!-- <img class="light-mode-item h-40px" src="./logo-light.svg" alt="logo"> -->
+                    <img class="dark-mode-item h-40px" src="./resource/img/Screenshot 2024-01-09 173954.png" alt="logo">
+                  </a>
+                  
+                  <p class="my-3 text-robo">Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
+                  <ul class="list-inline mb-0 mt-3">
+                    <li class="list-inline-item"> <a class="btn btn-face btn-sm shadow px-2 text-facebook" href="#"><i class="bi bi-facebook"></i></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-insta btn-sm shadow px-2 text-instagram" href="#"><i class="bi bi-instagram"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-whatsup btn-sm shadow px-2 text-twitter" href="#"><i class="bi bi-whatsapp"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-link btn-sm shadow px-2 text-linkedin" href="#"><i class="bi bi-linkedin"></i></a> </li>
+                  </ul>
+                </form>
+              </div>
+  
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white text-hebo font-h5">Company</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="./about.html" class="nav-link p-0 text-white  foot-ancor text-robo">About us</a></li>
+                  <li class="nav-item mb-2"><a href="./Contactus.html" class="nav-link p-0 text-white  foot-ancor text-robo">Contact us</a></li>
+                  <li class="nav-item mb-2"><a href="./blog.html" class="nav-link p-0 text-white  foot-ancor text-robo">News and Blogs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white  foot-ancor text-robo">Library</a></li>
+                  <li class="nav-item mb-2"><a href="./career.html" class="nav-link p-0 text-white  foot-ancor text-robo">Career</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-white text-hebo font-h5">Community</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">Documentation</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">Forum</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white foot-ancor text-robo  ">Sitemap</a></li>
+                  
+                </ul>
+              </div>
+        
+              <div class="col-6 col-md-3 mb-3">
+                <h5 class="text-white text-hebo font-h5">Contact</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="tel:+1234567890"  class="nav-link p-0 text-white text-robo foot-ancor">Toll free:+1234 568 963
+                    (9:AM to 8:PM IST)
+                    </a></li>
+                  <li class="nav-item mb-2"><a href="mailto:example@example.com" class="nav-link p-0 text-robo  text-white foot-ancor">Email:example@gmail.com</a></li>
+                  
+                </ul>
+              </div>
+        
+              
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p class="text-white  text-robo">&copy; 2024 Company, Inc. All rights reserved.</p>
+              <!-- Default dropup button -->
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-body-emphasis text-white  text-robo  text-robo foot-ancor" href="./Term-condittion.html">Terms of use</a></li>
+                <li class="ms-3"><a class="link-body-emphasis text-white  text-robo  text-robo foot-ancor" href="./privay-policy.html">Privacy policy</a></li>
+              </ul>
+            </div>
+          </footer>
+    </div>
+    <!-- footer End -->
+    <!-- Back to Top Button -->
+<button onclick="backToTop()" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+<script>
+  $(document).ready(function() {
+      const endNumber = 100; // Change this to the number you want
+
+      let currentNumber = 0;
+      const counterElement = $('#counter');
+
+      function updateCounter() {
+        counterElement.text(currentNumber);
+        if (currentNumber < endNumber) {
+          currentNumber++;
+          setTimeout(updateCounter, 100); // Adjust the speed of counting (milliseconds)
+        }
+      }
+
+      updateCounter();
+    });
+
+    $(document).ready(function() {
+      const endNumber = 200; // Change this to the number you want
+
+      let currentNumber = 0;
+      const counterElement = $('#counter2');
+
+      function updateCounter() {
+        counterElement.text(currentNumber);
+        if (currentNumber < endNumber) {
+          currentNumber++;
+          setTimeout(updateCounter, 200); // Adjust the speed of counting (milliseconds)
+        }
+      }
+
+      updateCounter();
+    });
+
+  // sidebar login form function
+  function toggleNav() {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+
+      if (sidebar.style.right === "0px") {
+          sidebar.style.right = "-400px";
+          main.style.marginRight = "0";
+          document.removeEventListener('click', closeNavOutside);
+          document.body.classList.remove('sidebar-open');
+      } else {
+          sidebar.style.right = "0px";
+          main.style.marginRight = "-400px";
+          document.addEventListener('click', closeNavOutside);
+          document.body.classList.add('sidebar-open');
+      }
+  }
+  function closeNav() {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+
+      sidebar.style.right = "-400px";
+      main.style.marginRight = "0";
+      document.removeEventListener('click', closeNavOutside);
+      document.body.classList.remove('sidebar-open');
+  }
+  function closeNavOutside(event) {
+      const sidebar = document.getElementById("mySidebar");
+      const main = document.getElementById("main");
+      const button = document.querySelector('.openbtn');
+
+      if (!event.target.closest('#mySidebar') && !event.target.closest('.openbtn')) {
+          closeNav();
+      }
+  } // sidebar login form function end
+
+  // Typed.js Initialization
+  var typed = new Typed('#typed-text', {
+    strings: ["future.", "potential.", "skills."],
+    typeSpeed: 90,
+    loop: true,
+    backSpeed: 30,
+    backDelay: 2500
+  });
+
+
+// Show back to top button when user scrolls down
+window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("back-to-top-btn").style.display = "block";
+    } else {
+      document.getElementById("back-to-top-btn").style.display = "none";
+    }
+  }
+  
+  // Scroll to the top when the button is clicked
+  function backToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+</script>
+</html>
+
